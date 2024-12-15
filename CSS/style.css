@@ -143,7 +143,7 @@ H1 {
 
 .icone-hover-curiculo:hover {
     transform: scale(1.5);
-    content: url("../ASSETS/ICONS/curiculo-icon-on.png");
+    content: url("/ASSETS/ICONS/curiculo-icon-on.png");
 }
 
 .icone-hover-linkedin {
@@ -152,7 +152,7 @@ H1 {
 
 .icone-hover-linkedin:hover {
     transform: scale(1.5);
-    content: url("../ASSETS/ICONS/linkedin-icon-on.png");
+    content: url("/ASSETS/ICONS/linkedin-icon-on.png");
 }
 
 .icone-hover-whatsapp {
@@ -161,7 +161,7 @@ H1 {
 
 .icone-hover-whatsapp:hover {
     transform: scale(1.5);
-    content: url("../ASSETS/ICONS/whatsapp-icon-on.png");
+    content: url("/ASSETS/ICONS/whatsapp-icon-on.png");
 }
 
 .icone-container-inicio:hover .tooltip {
@@ -244,7 +244,7 @@ H1 {
 }
 
 .navbar a.active .icone-inicio {
-    content: url('/ASSETS/ICONS/inicio-icon-on.png');
+    content: url('ASSETS/ICONS/inicio-icon-on.png');
 }
 
 .navbar a:hover .icone-sobre {
@@ -419,7 +419,7 @@ H1 {
 
 .icone-hover-excel:hover {
     transform: scale(1.5);
-    content: url("../ASSETS/ICONS/excel-icon-on.png");
+    content: url("/ASSETS/ICONS/excel-icon-on.png");
 }
 
 .icone-hover-python {
@@ -428,7 +428,7 @@ H1 {
 
 .icone-hover-python:hover {
     transform: scale(1.5);
-    content: url("../ASSETS/ICONS/python-icon-on.png");
+    content: url("/ASSETS/ICONS/python-icon-on.png");
 }
 
 .icone-hover-google-sheets {
@@ -437,7 +437,7 @@ H1 {
 
 .icone-hover-google-sheets:hover {
     transform: scale(1.5);
-    content: url("../ASSETS/ICONS/google-sheets-icon-on.png");
+    content: url("/ASSETS/ICONS/google-sheets-icon-on.png");
 }
 
 .icone-hover-autocad {
@@ -446,7 +446,7 @@ H1 {
 
 .icone-hover-autocad:hover {
     transform: scale(1.5);
-    content: url("../ASSETS/ICONS/autocad-icon-on.png");
+    content: url("/ASSETS/ICONS/autocad-icon-on.png");
 }
 
 .icone-hover-soft-solar {
@@ -455,7 +455,7 @@ H1 {
 
 .icone-hover-soft-solar:hover {
     transform: scale(1.5);
-    content: url("../ASSETS/ICONS/softs-solar-icon-on.png");
+    content: url("/ASSETS/ICONS/softs-solar-icon-on.png");
 }
 
 .tooltip {
