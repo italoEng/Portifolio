@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Enenharia Elétrica, Engenheiro Elétricista, Energia Solar, Energia Solar Fotovoltaica, Python">
+    <meta name="author" content="Italo da Silva França">
+    <title>Italo França - Portifólio</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Menu -->
+    <nav class="navbar">
+        <a href="#inicio">
+            <img src="/ASSETS/ICONS/inicio-icon.png" class="icone-menu icone-inicio">
+            Início
+        </a>
+        <a href="#sobre">
+            <img src="/ASSETS/ICONS/sobre-icon.png" class="icone-menu icone-sobre">
+            Sobre
+        </a>
+        <a href="#softwares">
+            <img src="/ASSETS/ICONS/softwares-icon.png" class="icone-menu icone-softwares">
+            Softwares
+        </a>
+        <a href="#projetos">
+            <img src="/ASSETS/ICONS/project-icon.png" class="icone-menu icone-projetos">
+            Projetos
+        </a>
+        <a href="#contato">
+            <img src="/ASSETS/ICONS/contato-icon.png" class="icone-menu icone-contato">
+            Contato
+        </a>
+        <div id="icone-tema" onclick="trocarIcone()">
+            <img src="/ASSETS/ICONS/sol-icon.png" id="icone-sol" class="icone-sol show">
+            <img src="/ASSETS/ICONS/lua-icon.png" id="icone-lua" class="icone-lua hide">
+        </div>
+    </nav>
+
+    <!-- Inicio -->
+    <div class="container">
+        <section id="inicio" class="inicio full-screen">
+            <h1></h1>
+            <div class="inicio-conteiner">
+                <h2 class="animate-text">Italo França</h2>
+                <h3 class="animate-text">Engenheiro Elétricista & Analista de dados</h3>
+                <img src="/ASSETS/IMAGES/imagem1.jpg" alt="Italo França" class="inicio-imagem" loading="lazy">
+                <div class="icones-inicio">
+                    <a class="animate-text">
+
+                        <div class="icone-container-inicio animate-text">
+                            <a href="docs/Italo da Silva França - CV.pdf" download="Curriculo-Italo-Franca">
+                                <img src="../ASSETS/ICONS/curiculo-icon.png" class="icone-hover-curiculo">
+                                <span class="tooltip">Baixar CV</span>
+                            </a>
+                        </div>
+
+                        <div class="icone-container-inicio">
+                            <a href="https://www.linkedin.com/in/italo-da-silva-frança-5b945b200/" target="_blank" class="animate-text">
+                                <img src="../ASSETS/ICONS/linkedin-icon.png" class="icone-hover-linkedin">
+                            </a>
+                            <span class="tooltip">Linkedin</span>
+                        </div>
+
+                        <div class="icone-container-inicio">
+                            <a href="http://wa.me/5511951202763" target="_blank" class="animate-text">
+                                <img src="../ASSETS/ICONS/whatsapp-icon.png" class="icone-hover-whatsapp">
+                            </a>
+                            <span class="tooltip">WhatsApp</span>
+                        </div>
+
+                    </a>
+                </div>
+                <a href="#sobre">
+                    <button class="animate-text">Sobre mim</button>
+                </a>
+            </div>
+        </section>
+        
+
+        <!-- Sobre -->
+        <section id="sobre" class="sobre full-screen">
+            <div class="sobre-left">
+                <img src="../ASSETS/IMAGES/imagem1.jpg" alt="Italo França" class="perfil-imagem">
+                <img src="../ASSETS/IMAGES/imagem1.jpg" alt="Italo França" class="perfil-imagem">
+                <img src="../ASSETS/IMAGES/imagem1.jpg" alt="Italo França" class="perfil-imagem">
+                <ul class="lista-borda">
+                    <li><h2>Sobre Mim</h2></li>
+                    <li>Nome: Italo França</li>
+                    <li>Idade: <span id="idade"></span></li>
+                    <li>Graduação: Engenharia Elétrica | Mackenzie 2017 - 2022</li>
+                    <li>Local: São Paulo - SP</li>
+                </ul>
+
+                <ul class="lista-borda">
+                    <li><h2>Cargo Atual</h2></li>
+                    <li>Empresa: Holu Solar</li>
+                    <li>Cargo: Analista Junior</li>
+                </ul>
+
+                <ul class="lista-borda">
+                    <li><h2>Cursos</h2></li>
+                    <li>Curso 1</li>
+                    <li>Curso 2</li>
+                </ul>
+            </div>
+
+            <div class="sobre-right">
+                <H1 class="animate-text">Quem sou eu</H1>
+
+                <p class="animate-text">Meu nome é Italo sou formado em Engenharia Elétrica, apaixonado por tecnologia, gosto de aprender
+                    coisas nova, e aprimora meus conhecimetos.
+                </p>
+            </div>
+        </section>
+
+        <section id="softwares" class="Softwares full-screen">
+            <H1 class="animate-text">Softwares</H1>
+
+            <div class="icones-softwares">
+                <div class="icone-container" onclick="mostrarTexto('excel',this)">
+                    <img src="../ASSETS/ICONS/excel-icon.png" alt="Microsoft Excel" class="icone-hover-excel">
+                    <span class="tooltip">Microsoft Excel</span>
+                    <div class="descricao" id="excel-descricao"  style="display:none;">
+                        <h3>Microsoft Excel</h3>
+                        <p>Descrição generica</p>
+                    </div>
+                </div>
+
+                <div class="icone-container" onclick="mostrarTexto('google-sheets', this)">
+                    <img src="../ASSETS/ICONS/google-sheets-icon.png" alt="Google Sheets" class="icone-hover-google-sheets">
+                    <span class="tooltip">Google Sheets</span>
+                    <div class="descricao" id="google-sheets-descricao"  style="display:none;">
+                        <h3>Google Sheets</h3>
+                        <p>Descrição generica</p>
+                    </div>
+                </div>
+
+                <div class="icone-container" onclick="mostrarTexto('python', this)">
+                    <img src="../ASSETS/ICONS/python-icon.png" alt="Python" class="icone-hover-python">
+                    <span class="tooltip">Python</span>
+                    <div class="descricao" id="python-descricao"  style="display:none;">
+                        <h3>Python</h3>
+                        <p>Descrição generica</p>
+                    </div>
+                </div>
+
+                <div class="icone-container" onclick="mostrarTexto('autocad', this)">
+                    <img src="../ASSETS/ICONS/autocad-icon.png" alt="Autocad" class="icone-hover-autocad">
+                    <span class="tooltip">Autocad</span>
+                    <div class="descricao" id="autocad-descricao"  style="display:none;">
+                        <h2>Autocad</h2>
+                        <p>Descrição generica</p>
+                    </div>
+                </div>
+
+
+                <div class="icone-container" onclick="mostrarTexto('soft-solar', this)">
+                    <img src="../ASSETS/ICONS/softs-solar-icon.png" alt="Soft Solar" class="icone-hover-soft-solar">
+                    <span class="tooltip">Softwares Solar</span>
+                    <div class="descricao" id="soft-solar-descricao"  style="display:none;">
+                        <h3>Softwares solar</h3>
+                        <p>Descrição generica</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="projetos, full-screen">
+            <H1 class="animate-text">Projetos</H1>
+            <div class="projetos-filtro">
+                <button class="filtro-btn active" onclick="filtrarProjetos('todos')">Todos</button>
+                <button class="filtro-btn" onclick="filtrarProjetos('destaques')">Destaques</button>
+                <button class="filtro-btn" onclick="filtrarProjetos('Energia Solar')">Energia Solar</button>
+                <button class="filtro-btn" onclick="filtrarProjetos('python')">Python</button>
+            </div>
+
+            <div id="contador-projetos">Projetos encontrados: 0</div>
+        
+            <!-- Container de Projetos -->
+            <div class="projetos-container">
+                <div class="projeto" data-categoria="destaques python">
+                    <h3>Projeto 1</h3>
+                    <p>Descrição do projeto.</p>
+                </div>
+                <div class="projeto" data-categoria="javascript">
+                    <h3>Projeto 2</h3>
+                    <p>Descrição do projeto.</p>
+                </div>
+                <div class="projeto" data-categoria="destaques javascript">
+                    <h3>Projeto 3</h3>
+                    <p>Descrição do projeto.</p>
+                </div>
+                <div class="projeto" data-categoria="python">
+                    <h3>Projeto 4</h3>
+                    <p>Descrição do projeto.</p>
+                </div>
+                <div class="projeto" data-categoria="python">
+                    <h3>Projeto 5</h3>
+                    <p>Descrição do projeto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="Contato full-screen">
+            <h1 class="animate-text">Contato</h1>
+
+            <div class="contato-container">
+
+                <div class="contato-left">
+                    <img src="../ASSETS/ICONS/sms.png">      
+                </div>
+        
+                <div class="contato-right">
+                    <form action="send-email.php" method="post" enctype="text/plain">
+                        <label for="nome" class="animate-text">Nome:</label>
+                        <input type="text" id="nome" name="nome" required class="animate-text">
+                
+                        <label for="email" class="animate-text">E-mail:</label>
+                        <input type="email" id="email" name="email" required class="animate-text">
+                
+                        <label for="assunto" class="animate-text">Assunto:</label>
+                        <input type="text" id="assunto" name="assunto" required class="animate-text">
+                
+                        <label for="mensagem" class="animate-text">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="4" required class="animate-text"></textarea>
+                
+                        <button type="submit" class="animate-text">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

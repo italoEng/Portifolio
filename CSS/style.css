@@ -1,0 +1,675 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* Travamento no scroll */
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start; /* Alinha cada seção no topo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.full-screen {
+    height: 100vh; /* Altura igual à janela visível */
+    display: block; /* Centraliza os elementos */
+    flex-direction: column; /* Alinha os filhos verticalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 20px; /* Adiciona um espaço interno */
+    box-sizing: border-box;
+    text-align: center; /* Centraliza textos */
+}
+
+
+H1 {
+    margin-top: 100px;
+    font-size: 40px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50%); 
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-text {
+    display: inline-block;
+    animation: slideIn 1s ease-out;
+    opacity: 0;
+    animation-fill-mode: forwards; 
+}
+
+/* Icinio */
+#inicio {
+    position: relative;
+}
+
+
+.inicio-conteiner {
+    margin-top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.inicio h2 {
+    font-size: 80px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.inicio h3 {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0;
+    border-top: 5px solid #6CE5E8;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.icones-inicio {
+    text-align: left;
+    display: flex;
+    gap: 15px;
+    margin-top: 110px;
+    position: absolute;
+    left: 31%;
+}
+
+
+.inicio button {
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.inicio button:hover {
+    background-color: #6CE5E8;
+    color: #fff;
+}
+
+.inicio-imagem {
+    width: 350px;
+    height: 350px; 
+    border: 4px solid #6CE5E8;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    left: 5%;
+}
+
+.icones-inicio img{
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+    margin: 0.9px;
+    cursor: pointer;
+}
+
+.icone-hover {
+    width: 30px;
+    height: 30px;
+}
+
+.icone-hover-curiculo {
+    transition: 0.3s;
+}
+
+.icone-hover-curiculo:hover {
+    transform: scale(1.5);
+    content: url("../ASSETS/ICONS/curiculo-icon-on.png");
+}
+
+.icone-hover-linkedin {
+    transition: 0.3s;
+}
+
+.icone-hover-linkedin:hover {
+    transform: scale(1.5);
+    content: url("../ASSETS/ICONS/linkedin-icon-on.png");
+}
+
+.icone-hover-whatsapp {
+    transition: 0.3s;
+}
+
+.icone-hover-whatsapp:hover {
+    transform: scale(1.5);
+    content: url("../ASSETS/ICONS/whatsapp-icon-on.png");
+}
+
+.icone-container-inicio:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.sobre-left ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sobre-left ul li {
+    margin: 10px;
+}
+
+
+H1 {
+    text-align: center;
+}
+
+.navbar {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.navbar a:hover { 
+    color: #6CE5E8;
+}
+
+.navbar a.active {
+    color: #6CE5E8;
+    font-weight: bold;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #6CE5E8;
+    transition: width 0.6s;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.icone-menu {
+    width: 25px;
+    height: 25px; 
+}
+
+.navbar a:hover .icone-inicio {
+    content: url('/ASSETS/ICONS/inicio-icon-on.png');
+    transition: 0.6s ease;
+}
+
+.navbar a.active .icone-inicio {
+    content: url('/ASSETS/ICONS/inicio-icon-on.png');
+}
+
+.navbar a:hover .icone-sobre {
+    content: url('/ASSETS/ICONS/sobre-icon-on.png');
+    transition: 0.6s ease;
+}
+
+.navbar a.active .icone-sobre {
+    content: url('/ASSETS/ICONS/sobre-icon-on.png');
+}
+
+.navbar a:hover .icone-softwares {
+    content: url('/ASSETS/ICONS/softwares-icon-on.png');
+    transition: 0.6 ease;
+}
+
+.navbar a.active .icone-softwares {
+    content: url('/ASSETS/ICONS/softwares-icon-on.png');
+}
+
+.navbar a:hover .icone-projetos {
+    content: url('/ASSETS/ICONS/project-icon-on.png');
+    transition: 0.6 ease;
+}
+
+.navbar a.active .icone-projetos {
+    content: url('/ASSETS/ICONS/project-icon-on.png');
+}
+
+.navbar a:hover .icone-contato {
+    content: url('/ASSETS/ICONS/contato-icon-on.png');
+    transition: 0.6 ease;
+}
+
+.navbar a.active .icone-contato {
+    content: url('/ASSETS/ICONS/contato-icon-on.png');
+}
+
+#icone-tema {
+    position: absolute;
+    right: 80px;
+    top: 50%; 
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-sol, .icone-lua {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.icone-sol.hide, .icone-lua.hide {
+    opacity: 0; /* Esconde o ícone */
+    transform: translateY(50%); /* Move para baixo */
+}
+
+.icone-sol.show, .icone-lua.show {
+    opacity: 1; /* Mostra o ícone */
+    transform: translateY(0); /* Retorna à posição original */
+}
+
+.content {
+    padding-top: 80px;
+}
+
+
+/* Seção Sobre */
+#sobre {
+    display: flex; /* Ativa o layout flexível */
+    flex-direction: row; /* Coloca os elementos lado a lado */
+    align-items: flex-start; /* Alinha os itens ao topo */
+    justify-content: space-between; /* Garante espaço proporcional entre os elementos */
+    gap: 20px; /* Espaço entre as colunas */
+    width: 100%; /* Ocupa toda a largura da página */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box;
+}
+
+.slider {
+    position: relative;
+    width: 150px; /* Tamanho do slider */
+    height: 150px; /* Mantém a imagem quadrada */
+    overflow: hidden; /* Oculta imagens fora do contêiner */
+}
+
+.perfil-imagem {
+    margin-top: 80px;
+    margin-bottom: 10px;
+    width: 450px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 450px; /* Pode usar auto para manter a proporção */
+    border-radius: 10px; /* Para fazer uma imagem circular */
+    object-fit: cover;
+    border: 2px solid #333; /* Borda opcional */
+    transition: opacity 0.5s;
+}
+
+.lista-borda {
+    width: 450px;
+    border: 2px solid #333;
+    padding: 15px; /* Espaço interno da borda */
+    border-radius: 10px; /* Cantos arredondados */
+    margin: 10px auto;
+    background-color: #f9f9f9;
+    transition: transform 0.3s, box-shadow 0.3s
+}
+
+.lista-borda:hover {
+    transform: scale(1.05); /* Aumenta levemente o tamanho da lista */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
+}
+
+.lista-borda li {
+    margin-bottom: 10px; /* Espaço entre os itens */
+}
+
+/* Softwares */
+
+#softwares {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#softwares h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.descricao {
+    display: none;
+}
+
+.icones-softwares {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-grow: 1;
+}
+
+.icone-container {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+}
+
+.icone-container img {
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+
+.icone-container img:hover {
+    transform: scale(1.2);
+}
+
+.icone-hover-excel {
+    transition: 0.3s;
+}
+
+.icone-hover-excel:hover {
+    transform: scale(1.5);
+    content: url("../ASSETS/ICONS/excel-icon-on.png");
+}
+
+.icone-hover-python {
+    transition: 0.3s;
+}
+
+.icone-hover-python:hover {
+    transform: scale(1.5);
+    content: url("../ASSETS/ICONS/python-icon-on.png");
+}
+
+.icone-hover-google-sheets {
+    transition: 0.3s;
+}
+
+.icone-hover-google-sheets:hover {
+    transform: scale(1.5);
+    content: url("../ASSETS/ICONS/google-sheets-icon-on.png");
+}
+
+.icone-hover-autocad {
+    transition: 0.3s;
+}
+
+.icone-hover-autocad:hover {
+    transform: scale(1.5);
+    content: url("../ASSETS/ICONS/autocad-icon-on.png");
+}
+
+.icone-hover-soft-solar {
+    transition: 0.3s;
+}
+
+.icone-hover-soft-solar:hover {
+    transform: scale(1.5);
+    content: url("../ASSETS/ICONS/softs-solar-icon-on.png");
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    margin-top: 10px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* Projetos */
+.projetos-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Limita a 4 colunas */
+    gap: 20px;
+}
+
+.projeto {
+    padding: 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.projeto h3 {
+    margin-top: 0;
+}
+
+.projeto.hide {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+}
+
+.projetos-filtro {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 20px;
+    background-color: #333;
+    border-radius: 50px; 
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.filtro-btn {
+    flex: 1;
+    padding: 10px 20px;
+    background-color: transparent; 
+    color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 50px; 
+    text-align: center;
+}
+
+.filtro-btn:hover,
+.filtro-btn.active {
+    background-color: #6CE5E8;
+    color: #333;
+    box-shadow: 0px 4px 6px rgba(108, 229, 232, 0.4); /* Adiciona um leve destaque */
+}
+
+.filtro-btn:not(:last-child) {
+    margin-right: -1px; /* Remova a borda para manter a continuidade */
+}
+
+#contador-projetos {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.projeto.hide {
+    display: none;
+}
+
+.projeto.show {
+    display: block;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1200px) {
+    .projetos-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas médias */
+    }
+}
+
+@media (max-width: 800px) {
+    .projetos-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas pequenas */
+    }
+}
+
+@media (max-width: 500px) {
+    .projetos-container {
+        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas */
+    }
+}
+
+
+/* Contato */
+.Contato {
+    display: flex;
+    flex-direction: column; /* Empilha os elementos */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: flex-start; /* Garante que os itens fiquem no topo */
+    padding: 40px 20px; /* Espaçamento interno */
+    box-sizing: border-box;
+    align-items: center;
+    width: 100%;
+}
+
+.contato-container {
+    display: flex;
+    flex-direction: row; /* Alinha os itens lado a lado */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    gap: 50px;
+    width: 100%;
+    height: 80%;
+    max-width: 900px; /* Define a largura máxima */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    box-sizing: border-box;
+}
+
+
+.contato-left {
+    margin-right: 200px;
+    flex: 1; /* Ocupa 1 fração do espaço */
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.contato-left img {
+    margin-right: 200px;
+    max-width: 100%; /* Limita a largura da imagem */
+    height: auto; /* Mantém a proporção */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+
+.contato-right {
+    flex: 2; /* Ocupa 2 frações do espaço */
+    display: flex;
+    flex-direction: column; /* Empilha os elementos do formulário */
+    gap: 15px;
+}
+
+
+.Contato form {
+    display: flex;
+    flex-direction: column; /* Empilha os campos */
+    gap: 15px; /* Espaçamento entre os campos */
+}
+
+.Contato input,
+.Contato textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.Contato button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.Contato button:hover {
+    background-color: #333;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contato-container {
+        flex-direction: column; /* Empilha as colunas em telas menores */
+        gap: 20px;
+    }
+}
+
+
+/* Tema escuro */
+body.dark-theme {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.navbar.dark-theme {
+    background-color: #f0f0f0;
+}
+
+.inicio button.dark-theme {
+    background-color: #f0f0f0;
+    color: #333;
+}
