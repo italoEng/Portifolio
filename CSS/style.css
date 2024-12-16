@@ -262,7 +262,7 @@ H1 {
 }
 
 .navbar a.active .icone-softwares {
-    content: url('/Portifolio/ASSETS/ICONS/softwares-icon-on.png');
+    content: url('Portifolio/ASSETS/ICONS/softwares-icon-on.png');
 }
 
 .navbar a:hover .icone-projetos {
