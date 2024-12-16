@@ -60,124 +60,123 @@ H1 {
 /* Icinio */
 #inicio {
     position: relative;
+    min-height: 100vh; /* Garante altura de 100% da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
-
 
 .inicio-conteiner {
-    margin-top: 30%;
+    display: flex;
+    flex-direction: row; /* Organiza os elementos em linha */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 40px; /* Espaçamento entre imagem e texto */
+    text-align: left;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.inicio-imagem {
+    width: 350px; /* Mantém o tamanho original */
+    height: 350px;
+    border: 4px solid #6CE5E8;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.texto-inicio {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+    gap: 20px; /* Espaçamento entre título, subtítulo e botão */
+    max-width: 600px; /* Limite para o texto */
 }
 
-.inicio h2 {
-    font-size: 80px;
+.texto-inicio h2 {
+    font-size: 80px; /* Mantém o tamanho original */
     font-weight: 600;
     margin: 0;
-    text-align: center;
+    text-align: left; /* Alinhamento à esquerda */
 }
 
-.inicio h3 {
-    font-size: 30px;
+.texto-inicio h3 {
+    font-size: 30px; /* Mantém o tamanho original */
     font-weight: 400;
     margin: 0;
     border-top: 5px solid #6CE5E8;
     padding-top: 5px;
-    text-align: center;
+    text-align: left;
 }
 
 .icones-inicio {
-    text-align: left;
     display: flex;
+    justify-content: flex-start; /* Alinha os ícones à esquerda */
     gap: 15px;
-    margin-top: 110px;
-    position: absolute;
-    left: 31%;
+    flex-wrap: wrap; /* Permite quebra em telas menores */
+    margin-top: 20px; /* Ajuste do espaçamento */
 }
 
+.icones-inicio img {
+    width: 35px; /* Mantém o tamanho original */
+    height: 35px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.icones-inicio img:hover {
+    transform: scale(1.2); /* Animação suave */
+}
 
 .inicio button {
-    margin-top: 60px;
-    padding: 20px;
+    margin-top: 20px;
+    padding: 20px 40px;
     background-color: #333;
     color: white;
     border: none;
     border-radius: 40px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .inicio button:hover {
     background-color: #6CE5E8;
-    color: #fff;
+    transform: scale(1.05);
 }
 
-.inicio-imagem {
-    width: 350px;
-    height: 350px; 
-    border: 4px solid #6CE5E8;
-    border-radius: 50%;
-    object-fit: cover;
-    position: absolute;
-    left: 5%;
-}
+@media (max-width: 768px) {
+    .inicio-conteiner {
+        flex-direction: column; /* Empilha elementos em telas menores */
+        gap: 20px;
+    }
 
-.icones-inicio img{
-    width: 35px;
-    height: 35px;
-    margin-bottom: 10px;
-    margin: 0.9px;
-    cursor: pointer;
-}
+    .inicio-imagem {
+        width: 250px; /* Ajusta imagem em telas menores */
+        height: 250px;
+    }
 
-.icone-hover {
-    width: 30px;
-    height: 30px;
-}
+    .texto-inicio h2 {
+        font-size: 60px; /* Reduz tamanho do título */
+    }
 
-.icone-hover-curiculo {
-    transition: 0.3s;
-}
+    .texto-inicio h3 {
+        font-size: 24px; /* Reduz tamanho do subtítulo */
+    }
 
-.icone-hover-curiculo:hover {
-    transform: scale(1.5);
-    content: url("/ASSETS/ICONS/curiculo-icon-on.png");
-}
+    .icones-inicio img {
+        width: 30px;
+        height: 30px;
+    }
 
-.icone-hover-linkedin {
-    transition: 0.3s;
-}
-
-.icone-hover-linkedin:hover {
-    transform: scale(1.5);
-    content: url("/ASSETS/ICONS/linkedin-icon-on.png");
-}
-
-.icone-hover-whatsapp {
-    transition: 0.3s;
-}
-
-.icone-hover-whatsapp:hover {
-    transform: scale(1.5);
-    content: url("/ASSETS/ICONS/whatsapp-icon-on.png");
-}
-
-.icone-container-inicio:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
+    .inicio button {
+        font-size: 14px;
+        padding: 15px 30px;
+    }
 }
 
 
-.sobre-left ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sobre-left ul li {
-    margin: 10px;
-}
 
 
 H1 {
