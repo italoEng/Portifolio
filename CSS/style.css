@@ -143,7 +143,7 @@ H1 {
 
 .icone-hover-curiculo:hover {
     transform: scale(1.5);
-    content: url("/ASSETS/ICONS/curiculo-icon-on.png");
+    content: url("ASSETS/ICONS/curiculo-icon-on.png");
 }
 
 .icone-hover-linkedin {
@@ -152,7 +152,7 @@ H1 {
 
 .icone-hover-linkedin:hover {
     transform: scale(1.5);
-    content: url("/ASSETS/ICONS/linkedin-icon-on.png");
+    content: url("ASSETS/ICONS/linkedin-icon-on.png");
 }
 
 .icone-hover-whatsapp {
@@ -161,7 +161,7 @@ H1 {
 
 .icone-hover-whatsapp:hover {
     transform: scale(1.5);
-    content: url("/ASSETS/ICONS/whatsapp-icon-on.png");
+    content: url("ASSETS/ICONS/whatsapp-icon-on.png");
 }
 
 .icone-container-inicio:hover .tooltip {
@@ -248,39 +248,39 @@ H1 {
 }
 
 .navbar a:hover .icone-sobre {
-    content: url('/ASSETS/ICONS/sobre-icon-on.png');
+    content: url('ASSETS/ICONS/sobre-icon-on.png');
     transition: 0.6s ease;
 }
 
 .navbar a.active .icone-sobre {
-    content: url('/ASSETS/ICONS/sobre-icon-on.png');
+    content: url('ASSETS/ICONS/sobre-icon-on.png');
 }
 
 .navbar a:hover .icone-softwares {
-    content: url('/ASSETS/ICONS/softwares-icon-on.png');
+    content: url('ASSETS/ICONS/softwares-icon-on.png');
     transition: 0.6 ease;
 }
 
 .navbar a.active .icone-softwares {
-    content: url('/ASSETS/ICONS/softwares-icon-on.png');
+    content: url('ASSETS/ICONS/softwares-icon-on.png');
 }
 
 .navbar a:hover .icone-projetos {
-    content: url('/ASSETS/ICONS/project-icon-on.png');
+    content: url('ASSETS/ICONS/project-icon-on.png');
     transition: 0.6 ease;
 }
 
 .navbar a.active .icone-projetos {
-    content: url('/ASSETS/ICONS/project-icon-on.png');
+    content: url('ASSETS/ICONS/project-icon-on.png');
 }
 
 .navbar a:hover .icone-contato {
-    content: url('/ASSETS/ICONS/contato-icon-on.png');
+    content: url('ASSETS/ICONS/contato-icon-on.png');
     transition: 0.6 ease;
 }
 
 .navbar a.active .icone-contato {
-    content: url('/ASSETS/ICONS/contato-icon-on.png');
+    content: url('ASSETS/ICONS/contato-icon-on.png');
 }
 
 #icone-tema {
