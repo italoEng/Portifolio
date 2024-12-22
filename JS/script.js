@@ -65,52 +65,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // efeito barra de navegação
-document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".navbar a");
-    const animatedTexts = document.querySelectorAll(".animate-text");
+let currentSection = 0;
+const sections = document.querySelectorAll('section');
+const totalSections = sections.length;
+let isScrolling = false;
 
+// Defina o intervalo de tempo para permitir outra rolagem (milissegundos)
+const scrollDelay = 600; 
 
-    const container = document.querySelector(".container");
-    container.addEventListener("scroll", () => {
-        sections.forEach((section, index) => {
-            const rect = section.getBoundingClientRect();
+// Evento de rolagem com o mouse
+window.addEventListener('wheel', (e) => {
+  if (isScrolling) return; // Impede o scroll rápido
 
-            if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
-                navLinks.forEach(link => link.classList.remove("active"));
-                navLinks[index].classList.add("active");
+  isScrolling = true;
 
+  if (e.deltaY > 0) {
+    // Scroll para baixo
+    currentSection = Math.min(currentSection + 1, totalSections - 1);
+  } else {
+    // Scroll para cima
+    currentSection = Math.max(currentSection - 1, 0);
+  }
 
-                const animateText = section.querySelectorAll(".animate-text");
-                animateText.forEach(text => {
-                    text.style.animation = "slideIn 1s ease-out forwards";
-                });
-            }
-        });
-    });
+  // Move para a seção correspondente
+  scrollToSection(currentSection);
 
-
-    navLinks.forEach((link, index) => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
-            sections[index].scrollIntoView({
-                behavior: "smooth"
-            });
-        });
-    });
-
-
-    container.addEventListener("scroll", () => {
-        animatedTexts.forEach(text => {
-            const rect = text.getBoundingClientRect();
-            if (rect.bottom < 0 || rect.top > window.innerHeight) {
-                text.style.animation = "none";
-            }
-        });
-    });
+  // Define o tempo de espera antes de permitir outro scroll
+  setTimeout(() => {
+    isScrolling = false;
+  }, scrollDelay);
 });
 
+function scrollToSection(index) {
+  const section = sections[index];
+  window.scrollTo({
+    top: section.offsetTop, // Ajusta para a parte superior da seção
+    behavior: 'smooth'
+  });
+}
 
+
+
+// tema dark
 function trocarIcone() {
     const iconeSol = document.getElementById('icone-sol');
     const iconeLua = document.getElementById('icone-lua');

@@ -7,14 +7,13 @@ body {
 
 .container {
     height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory; /* Travamento no scroll */
+    overflow: hidden;
+
 }
 
 section {
-    height: 100vh;
-    scroll-snap-align: start; /* Alinha cada seção no topo */
-    display: flex;
+    height: 100vh; /* Cada seção ocupa toda a altura da viewport */
+    display: flex; /* Flexbox para centralizar conteúdo */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -175,9 +174,6 @@ H1 {
         padding: 15px 30px;
     }
 }
-
-
-
 
 H1 {
     text-align: center;
