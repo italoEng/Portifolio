@@ -123,14 +123,16 @@ ul {
     margin-top: 20px; /* Ajuste do espaçamento */
 }
 
-.icones-inicio img {
-    width: 35px; /* Mantém o tamanho original */
-    height: 35px;
+.icones-inicio svg{
+    width: 50px; /* Mantém o tamanho original */
+    height: 50px;
+    color:  #333;
     cursor: pointer;
     transition: transform 0.3s;
 }
 
-.icones-inicio img:hover {
+.icones-inicio svg:hover {
+    color: #6CE5E8;
     transform: scale(1.2); /* Animação suave */
 }
 
