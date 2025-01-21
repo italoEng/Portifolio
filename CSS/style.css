@@ -56,7 +56,7 @@ ul {
 }
 
 .animate-text {
-    display: inline-block;
+    display: block;
     animation: slideIn 1s ease-out;
     opacity: 0;
     animation-fill-mode: forwards; 
@@ -314,9 +314,10 @@ a:hover .icone-menu {
 
 
 .lista-borda {
-    width: 100%;
+    width: 90%;
+    max-width: 800px;
     border: 2px solid #333;
-    padding: 15px; /* Espaço interno da borda */
+    padding: 5px; /* Espaço interno da borda */
     border-radius: 10px; /* Cantos arredondados */
     margin: 10px auto;
     background-color: #f9f9f9;
@@ -329,9 +330,28 @@ a:hover .icone-menu {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
 }
 
+.lista-borda h2 {
+    margin: 0; 
+    padding: 0;
+}
+
 .lista-borda li {
-    margin-bottom: 10px;
     text-align: left;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 768px) {
+    .lista-borda {
+        width: 95%; /* Mais largo em telas pequenas */
+        padding: 10px; /* Reduz o padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .lista-borda {
+        width: 100%; /* Ocupa a largura total em telas muito pequenas */
+        padding: 8px; /* Padding ainda menor */
+    }
 }
 
 /* Softwares */
