@@ -32,6 +32,9 @@ section {
     text-align: center; /* Centraliza textos */
 }
 
+a {
+    text-decoration: none;
+}
 
 H1 {
     margin-top: 100px;
@@ -59,7 +62,7 @@ ul {
     display: block;
     animation: slideIn 1s ease-out;
     opacity: 0;
-    animation-fill-mode: forwards; 
+    animation-fill-mode: forwards;
 }
 
 /* Icinio */
@@ -151,6 +154,33 @@ ul {
 .inicio button:hover {
     background-color: #6CE5E8;
     transform: scale(1.05);
+}
+
+.icone-container-inicio {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.tooltip {
+    visibility: hidden;
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    font-size: 12px;
+    z-index: 1;
+}
+
+.icone-container-inicio:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
 
 @media (max-width: 768px) {
