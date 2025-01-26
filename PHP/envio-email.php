@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mensagem = htmlspecialchars($_POST['mensagem']);
 
     // Destinatário do e-mail (substitua pelo seu e-mail)
-    $destinatario = "seu-email@dominio.com";
+    $destinatario = "italodasilvafranca@outlook.com.br";
 
     // Monta o corpo do e-mail
     $corpo_email = "Nome: $nome\n";
