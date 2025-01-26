@@ -169,6 +169,7 @@ ul {
     padding: 5px 10px;
     border-radius: 4px;
     position: absolute;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -176,6 +177,8 @@ ul {
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     font-size: 12px;
     z-index: 1;
+    background-color: #333; /* Fundo escuro para o tooltip */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
 }
 
 .icone-container-inicio:hover .tooltip {
@@ -360,7 +363,7 @@ a:hover .icone-menu {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
 }
 
-.lista-borda h2 {
+.lista-borda h3 {
     margin: 0; 
     padding: 0;
 }
@@ -423,74 +426,29 @@ a:hover .icone-menu {
 .icone-container img {
     width: 100px;
     height: 100px;
+}
+
+.nome-software {
     display: block;
-}
-
-.icone-container img:hover {
-    transform: scale(1.2);
-}
-
-.icone-hover-excel {
-    transition: 0.3s;
-}
-
-.icone-hover-excel:hover {
-    transform: scale(1.5);
-    content: url("/ASSETS/ICONS/excel-icon-on.png");
-}
-
-.icone-hover-python {
-    transition: 0.3s;
-}
-
-.icone-hover-python:hover {
-    transform: scale(1.5);
-    content: url("/ASSETS/ICONS/python-icon-on.png");
-}
-
-.icone-hover-google-sheets {
-    transition: 0.3s;
-}
-
-.icone-hover-google-sheets:hover {
-    transform: scale(1.5);
-    content: url("/ASSETS/ICONS/google-sheets-icon-on.png");
-}
-
-.icone-hover-autocad {
-    transition: 0.3s;
-}
-
-.icone-hover-autocad:hover {
-    transform: scale(1.5);
-    content: url("/ASSETS/ICONS/autocad-icon-on.png");
-}
-
-.icone-hover-soft-solar {
-    transition: 0.3s;
-}
-
-.icone-hover-soft-solar:hover {
-    transform: scale(1.5);
-    content: url("/ASSETS/ICONS/softs-solar-icon-on.png");
-}
-
-.tooltip {
-    visibility: hidden;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px 10px;
-    position: absolute;
     margin-top: 10px;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    transition: opacity 0.5s;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+.icone-container{
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.icone-container:hover {
+    background-color: #6CE5E8; /* Cor de fundo ao passar o mouse */
 }
 
 /* Projetos */

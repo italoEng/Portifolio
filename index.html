@@ -125,7 +125,7 @@
             <div class="sobre-left">
                 <img src="/ASSETS/IMAGES/imagem1.jpg" alt="Italo França" class="perfil-imagem">
                 <ul class="lista-borda">
-                    <li><h2>Sobre Mim</h2></li>
+                    <li><h3>Sobre Mim</h3></li>
                     <li>Nome: Italo França</li>
                     <li>Idade: <span id="idade"></span></li>
                     <li>Graduação: Engenharia Elétrica | Mackenzie 2017 - 2022</li>
@@ -133,13 +133,13 @@
                 </ul>
 
                 <ul class="lista-borda">
-                    <li><h2>Cargo Atual</h2></li>
+                    <li><h3>Cargo Atual</h3></li>
                     <li>Empresa: Holu Solar</li>
                     <li>Cargo: Analista Junior</li>
                 </ul>
 
                 <ul class="lista-borda">
-                    <li><h2>Cursos</h2></li>
+                    <li><h3>Cursos</h3></li>
                     <li>Curso 1</li>
                     <li>Curso 2</li>
                 </ul>
@@ -157,50 +157,30 @@
             <H1 class="animate-text">Softwares</H1>
 
             <div class="icones-softwares">
-                <div class="icone-container" onclick="mostrarTexto('excel',this)">
+                <div class="icone-container">
                     <img src="/ASSETS/ICONS/excel-icon.png" alt="Microsoft Excel" class="icone-hover-excel">
-                    <span class="tooltip">Microsoft Excel</span>
-                    <div class="descricao" id="excel-descricao"  style="display:none;">
-                        <h3>Microsoft Excel</h3>
-                        <p>Descrição generica</p>
-                    </div>
+                    <span class="nome-software">Microsoft Excel</span>
                 </div>
 
-                <div class="icone-container" onclick="mostrarTexto('google-sheets', this)">
+                <div class="icone-container">
                     <img src="/ASSETS/ICONS/google-sheets-icon.png" alt="Google Sheets" class="icone-hover-google-sheets">
-                    <span class="tooltip">Google Sheets</span>
-                    <div class="descricao" id="google-sheets-descricao"  style="display:none;">
-                        <h3>Google Sheets</h3>
-                        <p>Descrição generica</p>
-                    </div>
+                    <span class="nome-software">Google Sheets</span>
                 </div>
 
-                <div class="icone-container" onclick="mostrarTexto('python', this)">
+                <div class="icone-container">
                     <img src="/ASSETS/ICONS/python-icon.png" alt="Python" class="icone-hover-python">
-                    <span class="tooltip">Python</span>
-                    <div class="descricao" id="python-descricao"  style="display:none;">
-                        <h3>Python</h3>
-                        <p>Descrição generica</p>
-                    </div>
+                    <span class="nome-software">Python</span>
                 </div>
 
-                <div class="icone-container" onclick="mostrarTexto('autocad', this)">
+                <div class="icone-container">
                     <img src="/ASSETS/ICONS/autocad-icon.png" alt="Autocad" class="icone-hover-autocad">
-                    <span class="tooltip">Autocad</span>
-                    <div class="descricao" id="autocad-descricao"  style="display:none;">
-                        <h2>Autocad</h2>
-                        <p>Descrição generica</p>
-                    </div>
+                    <span class="nome-software">Autocad</span>
                 </div>
 
 
-                <div class="icone-container" onclick="mostrarTexto('soft-solar', this)">
+                <div class="icone-container">
                     <img src="/ASSETS/ICONS/softs-solar-icon.png" alt="Soft Solar" class="icone-hover-soft-solar">
-                    <span class="tooltip">Softwares Solar</span>
-                    <div class="descricao" id="soft-solar-descricao"  style="display:none;">
-                        <h3>Softwares solar</h3>
-                        <p>Descrição generica</p>
-                    </div>
+                    <span class="nome-software">Softwares Solar</span>
                 </div>
             </div>
         </section>
@@ -251,19 +231,19 @@
                 </div>
         
                 <div class="contato-right">
-                    <form action="send-email.php" method="post" enctype="text/plain">
+                    <form action="send-email.php" method="post">
                         <label for="nome" class="animate-text">Nome:</label>
                         <input type="text" id="nome" name="nome" required class="animate-text">
-                
+                    
                         <label for="email" class="animate-text">E-mail:</label>
                         <input type="email" id="email" name="email" required class="animate-text">
-                
+                    
                         <label for="assunto" class="animate-text">Assunto:</label>
                         <input type="text" id="assunto" name="assunto" required class="animate-text">
-                
+                    
                         <label for="mensagem" class="animate-text">Mensagem:</label>
                         <textarea id="mensagem" name="mensagem" rows="4" required class="animate-text"></textarea>
-                
+                    
                         <button type="submit" class="animate-text">Enviar</button>
                     </form>
                 </div>
