@@ -142,3 +142,29 @@ function trocarIcone() {
     }
 }
 
+// enviar email
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('form-contato').addEventListener('submit', async (e) => {
+        e.preventDefault(); // Impede o envio tradicional do formulário
+
+        const formData = new FormData(e.target); // Coleta os dados do formulário
+        const endpoint = 'https://formspree.io/f/mpwqqwjw'; // Substitua pelo seu endpoint
+
+        try {
+            // Envia os dados do formulário
+            await fetch(endpoint, {
+                method: 'POST',
+                body: new URLSearchParams(formData),
+                headers: {
+                    'Accept': 'application/json',
+                },
+            });
+
+            e.target.reset(); // Limpa o formulário após o envio
+        } catch (error) {
+            console.error('Erro ao enviar o formulário:', error);
+        }
+    });
+});
+
+
